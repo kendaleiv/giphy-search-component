@@ -69,6 +69,8 @@ export default class UI {
     this.render([]);
 
     this.instance.querySelector(`.${this.searchClass}`).addEventListener('change', async evt => {
+      this.instance.dispatchEvent(new Event('GiphySearchComponent:Searching'));
+
       let results = [];
 
       if (evt.currentTarget.value) {
@@ -76,6 +78,8 @@ export default class UI {
       }
 
       this.render(results);
+
+      this.instance.dispatchEvent(new Event('GiphySearchComponent:Searched'));
     });
   }
 

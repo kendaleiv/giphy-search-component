@@ -11,5 +11,20 @@
       width="800px"
     >
     </app-giphy-search>
+
+    <script>
+      const giphySearchComponentEvents = [
+        'GiphySearchComponent:Searching',
+        'GiphySearchComponent:Searched'
+      ];
+
+      giphySearchComponentEvents.forEach(
+        x => document
+          .getElementsByTagName('app-giphy-search')[0]
+          .addEventListener(x, y => {
+            console.log(y);
+          })
+      );
+    </script>
   </body>
 </html>

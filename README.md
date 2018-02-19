@@ -26,6 +26,13 @@ Or, load this script manually: [https://unpkg.com/giphy-search-component@latest/
 | `height`                | The height of the embeddable component                                    | '500px' |
 | `width`                 | The width of the embeddable component                                     | '800px' |
 
+## Events
+
+| Event                            | Description                          |
+| -------------------------------- | ------------------------------------ |
+| `GiphySearchComponent:Searching` | Invoked when a search has started.   |
+| `GiphySearchComponent:Searched`  | Invoked when a search has completed. |
+
 ## Development
 
 - `npm install`
