@@ -16,5 +16,6 @@ module.exports = {
     path: path.join(__dirname, './dist'),
     filename: 'giphy-search-component.min.js',
     libraryTarget: 'umd'
-  }
+  },
+  plugins: plugins
 };
