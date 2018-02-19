@@ -1,5 +1,6 @@
 import GiphyApi from './giphy-api';
 import UI from './ui';
+import moment from 'moment';
 
 export default class GiphySearchComponent {
   constructor(configuration = null) {
