@@ -78,7 +78,9 @@ export default class UI {
     const container = this.instance.querySelector(`.${this.resultsContainerClass}`);
 
     if (results && results.data) {
-      container.innerHTML = results.data.map(x => `<img src="${x.images.preview_gif.url}" />`);
+      container.innerHTML = results.data
+        .map(x => `<img src="${x.images.preview_gif.url}" />`)
+        .join('');
     } else {
       container.innerHTML = '';
     }
