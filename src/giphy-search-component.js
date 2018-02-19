@@ -5,7 +5,9 @@ export default class GiphySearchComponent {
   constructor(configuration = null) {
     const defaultConfiguration = {
       defaultDomScope: document.body,
-      tagName: 'app-giphy-search'
+      tagName: 'app-giphy-search',
+      height: '800px',
+      width: '800px'
     };
 
     this.configuration = defaultConfiguration;
@@ -20,7 +22,7 @@ export default class GiphySearchComponent {
 
     [...instances].forEach(instance => {
       const giphyApi = new GiphyApi(instance.getAttribute('api-key'));
-      const ui = new UI(instance, giphyApi);
+      const ui = new UI(instance, this.configuration, giphyApi);
 
       ui.start(this.configuration.initialSearch);
     });
