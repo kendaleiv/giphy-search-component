@@ -10,12 +10,24 @@ if (process.env.INCLUDE_WEBPACK_HTML) {
 }
 
 module.exports = {
-  entry: './src/index.js',
+  entry: [
+    'babel-polyfill',
+    './src/index.js'
+  ],
   mode: 'development',
   output: {
     path: path.join(__dirname, './dist'),
     filename: 'giphy-search-component.min.js',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      }
+    ]
   },
   plugins: plugins
 };
