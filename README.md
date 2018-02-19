@@ -3,6 +3,7 @@
 An embeddable [GIPHY](https://giphy.com/) image search component.
 
 [![npm](https://img.shields.io/npm/v/giphy-search-component.svg)](https://www.npmjs.com/package/giphy-search-component)
+[![Travis](https://img.shields.io/travis/kendaleiv/giphy-search-component.svg)]()
 
 ### **[Try out a demo!](https://kendaleiv.github.io/giphy-search-component)**
 
