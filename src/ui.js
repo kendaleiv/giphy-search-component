@@ -53,7 +53,5 @@ export default class UI {
     } else {
       container.innerHTML = '';
     }
-
-    console.log(container.innerHTML);
   }
 }
