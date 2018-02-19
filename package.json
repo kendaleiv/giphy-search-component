@@ -1,6 +1,6 @@
 {
   "name": "giphy-search-component",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "An embeddable GIPHY image search component.",
   "bin": "dist/giphy-search-component.min.js",
   "files": [
