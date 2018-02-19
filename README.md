@@ -4,6 +4,8 @@ An embeddable [GIPHY](https://giphy.com/) image search component.
 
 [![npm](https://img.shields.io/npm/v/giphy-search-component.svg)](https://www.npmjs.com/package/giphy-search-component)
 
+### **[Try out a demo!](https://kendaleiv.github.io/giphy-search-component)**
+
 **Note:** This is a demo associated with my "Creating and Distributing Custom Web Components" talk. Items like linting and tests are not included, simplifying the repository.
 
 ## Installation
