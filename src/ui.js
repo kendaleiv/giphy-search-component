@@ -31,12 +31,12 @@ export default class UI {
           border: 1px solid #ccc;
           display: block;
           position: relative;
-          height: ${this.configuration.height};
-          width: ${this.configuration.width};
+          height: ${this.configuration.embedHeight};
+          width: ${this.configuration.embedWidth};
         }
 
         .${this.resultsContainerClass} {
-          height: calc(${this.configuration.height} - 36px);
+          height: calc(${this.configuration.embedHeight} - 36px);
           overflow: auto;
         }
 
@@ -50,7 +50,7 @@ export default class UI {
         .${this.searchClass} {
           font-size: 24px;
           vertical-align: middle;
-          width: calc(${this.configuration.width} - 109px);
+          width: calc(${this.configuration.embedWidth} - 109px);
         }
 
         .${this.poweredByGiphyClass} {

@@ -6,8 +6,8 @@ export default class GiphySearchComponent {
     const defaultConfiguration = {
       defaultDomScope: document.body,
       tagName: 'app-giphy-search',
-      height: '500px',
-      width: '800px'
+      embedHeight: '500px',
+      embedWidth: '800px'
     };
 
     this.configuration = defaultConfiguration;
