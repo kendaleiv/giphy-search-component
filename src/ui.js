@@ -35,6 +35,11 @@ export default class UI {
           width: ${this.configuration.width};
         }
 
+        .${this.resultsContainerClass} {
+          height: calc(${this.configuration.height} - 36px);
+          overflow: auto;
+        }
+
         .${this.controlsContainerClass} {
           position: absolute;
           bottom: 0;
