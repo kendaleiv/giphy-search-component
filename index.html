@@ -18,13 +18,13 @@
         'GiphySearchComponent:Searched'
       ];
 
-      giphySearchComponentEvents.forEach(
-        x => document
+      giphySearchComponentEvents.forEach(function(x) {
+        document
           .getElementsByTagName('app-giphy-search')[0]
           .addEventListener(x, y => {
             console.log(y);
-          })
-      );
+          });
+      });
     </script>
   </body>
 </html>
