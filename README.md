@@ -23,7 +23,7 @@ Or, load this script manually: [https://unpkg.com/giphy-search-component@latest/
 | Name (bold if required) | Description                                                               | Default Value |
 | ----------------------- | ------------------------------------------------------------------------- | ------------- |
 | **`api-key`**           | The API key to connect to GIPHY, see https://developers.giphy.com         | |
-| `height`                | The height of the embeddable component                                    | '800px' |
+| `height`                | The height of the embeddable component                                    | '300px' |
 | `width`                 | The width of the embeddable component                                     | '800px' |
 
 ## Development
