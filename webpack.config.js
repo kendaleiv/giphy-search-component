@@ -17,5 +17,14 @@ module.exports = {
     filename: 'giphy-search-component.min.js',
     libraryTarget: 'umd'
   },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      }
+    ]
+  },
   plugins: plugins
 };
