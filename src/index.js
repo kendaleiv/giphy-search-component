@@ -1,16 +1,3 @@
-export default class GiphySearchComponent {
-  constructor(configuration = null) {
-    const defaultConfiguration = {
-      defaultDomScope: document.body
-    };
+import GiphySearchComponent from './giphy-search-component';
 
-    this.configuration = defaultConfiguration;
-
-    if (configuration) {
-      Object.assign(this.configuration, configuration);
-    }
-  }
-
-  start() {
-  }
-}
+new GiphySearchComponent().start();
