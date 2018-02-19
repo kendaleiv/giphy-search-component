@@ -8,13 +8,29 @@
   </head>
   <body>
     <div class="container">
-      <h1>Demos</h1>
+      <h1>Demo</h1>
       <hr />
-      <h2>TODO</h2>
-      <hr />
-      <h2>Custom Events Log</h2>
-      <ul id="events-log"></ul>
+      <app-giphy-search
+        api-key="NilCckKtrJq9lDxMICbF7SrJTAN2wABk"
+        height="500px"
+        width="800px"
+      >
+      </app-giphy-search>
     </div>
     <script src="https://unpkg.com/giphy-search-component/dist/giphy-search-component.min.js"></script>
+    <script>
+      const giphySearchComponentEvents = [
+        'GiphySearchComponent:Searching',
+        'GiphySearchComponent:Searched'
+      ];
+
+      giphySearchComponentEvents.forEach(
+        x => document
+          .getElementsByTagName('app-giphy-search')[0]
+          .addEventListener(x, y => {
+            console.log(y);
+          })
+      );
+    </script>
   </body>
 </html>
