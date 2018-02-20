@@ -10,11 +10,12 @@ if (process.env.INCLUDE_WEBPACK_HTML) {
 }
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/giphy-search-component.js',
   mode: 'development',
   output: {
     path: path.join(__dirname, './dist'),
     filename: 'giphy-search-component.min.js',
+    library: 'GiphySearchComponent',
     libraryTarget: 'umd'
   },
   module: {
