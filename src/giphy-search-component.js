@@ -18,7 +18,8 @@ export default class GiphySearchComponent {
   }
 
   start(domScope = this.configuration.defaultDomScope) {
-    const instances = domScope.getElementsByTagName(this.configuration.tagName);
+    const instances = domScope.querySelectorAll(
+      `${this.configuration.tagName}, *[data-${this.configuration.tagName}]`);
 
     [...instances].forEach(instance => {
       const giphyApi = new GiphyApi(instance.getAttribute('api-key'));

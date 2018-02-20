@@ -23,6 +23,12 @@ Or, load this script manually: [https://unpkg.com/giphy-search-component@latest/
 <app-giphy-search api-key="API_KEY_HERE"></app-giphy-search>
 ```
 
+or
+
+```html
+<div data-app-giphy-search api-key="API_KEY_HERE"></div>
+```
+
 ## Attributes
 
 | Name (bold if required) | Description                                                               | Default Value |
