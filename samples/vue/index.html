@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>giphy-search-component Vue sample</title>
+  </head>
+  <body>
+    <div id="app">
+      <p>{{ message }}</p>
+      <div v-html="appGiphySearchHtml"></div>
+    </div>
+
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/giphy-search-component/dist/giphy-search-component.min.js"></script>
+
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+          message: 'Hello Vue.js!',
+          appGiphySearchHtml: `
+            <app-giphy-search
+              api-key="NilCckKtrJq9lDxMICbF7SrJTAN2wABk"
+              embed-height="500px"
+              embed-width="800px"
+            >
+            </app-giphy-search>`
+        },
+        mounted() {
+          new GiphySearchComponent().start();
+        }
+      });
+    </script>
+  </body>
+</html>
