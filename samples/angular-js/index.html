@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <!-- See https://angularjs.org/#the-basics -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello {{yourName}}!</h1>
+
+      <app-giphy-search
+        api-key="NilCckKtrJq9lDxMICbF7SrJTAN2wABk"
+        embed-height="500px"
+        embed-width="800px"
+      >
+      </app-giphy-search>
+    </div>
+
+    <script src="https://unpkg.com/giphy-search-component/dist/giphy-search-component.min.js"></script>
+  </body>
+</html>

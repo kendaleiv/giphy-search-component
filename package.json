@@ -21,6 +21,7 @@
     "dev": "webpack --mode development",
     "start": "cross-env INCLUDE_WEBPACK_HTML=true webpack-dev-server",
     "start:sample:angular": "http-server ./samples/angular",
+    "start:sample:angular-js": "http-server ./samples/angular-js",
     "start:sample:dynamic-import": "http-server ./samples/dynamic-import",
     "start:sample:react": "http-server ./samples/react",
     "start:sample:vanilla-js": "http-server ./samples/vanilla-js",
