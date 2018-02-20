@@ -18,6 +18,10 @@ export default class GiphySearchComponent {
   }
 
   start(domScope = this.configuration.defaultDomScope) {
+    if (!domScope) {
+      return;
+    }
+
     const instances = domScope.querySelectorAll(
       `${this.configuration.tagName}, *[data-${this.configuration.tagName}]`);
 
