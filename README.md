@@ -31,7 +31,7 @@ or
 
 ## Framework usage
 
-For frameworks with templates, like Vue.js, use raw HTML in the template and call `new GiphySearchComponent().start()` at the appropriate point in the framework lifecycle.
+For frameworks with templates, like Vue.js, use raw HTML in the template and call `new GiphySearchComponent().start();` at the appropriate point in the framework lifecycle.
 
 ## Attributes
 
