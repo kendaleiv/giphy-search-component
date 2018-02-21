@@ -38,8 +38,8 @@ For frameworks with templates, like Vue.js, use raw HTML in the template and cal
 | Name (bold if required) | Description                                                               | Default Value |
 | ----------------------- | ------------------------------------------------------------------------- | ------------- |
 | **`api-key`**           | The API key to connect to GIPHY, see https://developers.giphy.com         | |
-| `embed-height`          | The height of the embeddable component                                    | '500px' |
-| `embed-width`           | The width of the embeddable component                                     | '800px' |
+| `embed-height`          | The height of the embeddable component                                    | `'500px'` |
+| `embed-width`           | The width of the embeddable component                                     | `'800px'` |
 
 ## Events
 
