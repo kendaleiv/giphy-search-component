@@ -1,6 +1,7 @@
 # Custom
 dist/
 giphy-search-component-*.tgz
+stats.html
 
 # Logs
 logs
