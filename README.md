@@ -29,7 +29,7 @@ or
 <div data-app-giphy-search api-key="API_KEY_HERE"></div>
 ```
 
-## Framework usage
+### Framework usage
 
 For frameworks with templates, like Vue.js, use raw HTML in the template and call `new GiphySearchComponent().start();` at the appropriate point in the framework lifecycle.
 
