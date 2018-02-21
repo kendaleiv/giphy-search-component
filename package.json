@@ -26,6 +26,7 @@
     "start:sample:react": "http-server ./samples/react",
     "start:sample:vanilla-js": "http-server ./samples/vanilla-js",
     "start:sample:vue": "http-server ./samples/vue",
+    "start:sample:webpack": "npm run build && cd samples/webpack && webpack --mode production && http-server",
     "test": "npm run build && bundlesize"
   },
   "bundlesize": [
