@@ -10,26 +10,43 @@ export default class GiphySearchComponent {
       embedWidth: '800px'
     };
 
-    this.configuration = defaultConfiguration;
+    this.constructorConfiguration = defaultConfiguration;
 
     if (configuration) {
-      Object.assign(this.configuration, configuration);
+      Object.assign(this.constructorConfiguration, configuration);
     }
   }
 
-  start(domScope = this.configuration.defaultDomScope) {
+  start(domScope = this.constructorConfiguration.defaultDomScope) {
     if (!domScope) {
       return;
     }
 
     const instances = domScope.querySelectorAll(
-      `${this.configuration.tagName}, *[data-${this.configuration.tagName}]`);
+      `${this.constructorConfiguration.tagName}, *[data-${this.constructorConfiguration.tagName}]`);
 
     [...instances].forEach(instance => {
-      const giphyApi = new GiphyApi(instance.getAttribute('api-key'));
-      const ui = new UI(instance, this.configuration, giphyApi);
+      const configuration = Object.assign({}, this.constructorConfiguration);
 
-      ui.start(this.configuration.initialSearch);
+      const attributeConfiguration = {};
+
+      [...instance.attributes].forEach(x => {
+        // https://stackoverflow.com/a/6661012
+        // answering
+        // https://stackoverflow.com/questions/6660977/convert-hyphens-to-camel-case-camelcase
+        const camelCaseName = x.name.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); });
+
+        attributeConfiguration[camelCaseName] = x.value;
+      });
+
+      if (attributeConfiguration) {
+        Object.assign(configuration, attributeConfiguration);
+      }
+
+      const giphyApi = new GiphyApi(instance.getAttribute('api-key'));
+      const ui = new UI(instance, configuration, giphyApi);
+
+      ui.start(configuration.initialSearch);
     });
   }
 }
